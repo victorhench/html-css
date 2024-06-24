@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgray;
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            background-color: darkgray;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 5px solid black;
+        }
+
+        table{
+            width: 400px;
+            height: 400px;
+            background-color: lightgray;
+            border: 5px solid black;
+            margin: auto;
+        }
+
+        td{
+            border: 1px solid black;
+        }
+
+        .dado{
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+
+  <!--
+    TABlE = tabela
+    TABLE ROW = linha da tabela
+       TABLE HEADER = Cabeçalho da tabela
+       TABLE DATA = Dados da tabela
+       -->
+
+    <header>
+        <h1>Minha tabela</h1>
+    </header>
+    <table>
+        <tr>
+            <td>Mudei a taela</td>
+            <td class="dado">olha a cor escura aqui!</td>
+            <td>Essa não tem</td>
+        </tr>
+        <tr>
+            <td class="dado">Olha a cor aqui agora</td>
+            <td>Também não tem</td>
+            <td class="dado">Acabou a linha</td>
+        </tr>
+        <tr>
+            <td>Sem dados aqui</td>
+            <td class="dado">Aqui tambem não</td>
+            <td>Acabou a tabela XD</td>
+        </tr>
+    </table>
+</body>
+</html>

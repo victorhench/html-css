@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes externas</title>
+    <style>
+        @font-face {
+            font-family:'love' ;
+            src: url('varsity_regular.ttf') format('opentype'), url('varsity_regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+                        /* 
+            tipos de format()
+           -opentype (otf)
+             -truetype (ttf)
+            -embedded-opentype
+            -truetype-aat (Apple advanced
+            Typography)
+            -svg*/
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            font-family: 'love', Times, serif;
+            font-size: 3em;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis corrupti tenetur sint voluptates quibusdam accusamus vel ex? Soluta minus aliquid, a nam nisi aut quis! Vero velit quas sunt adipisci?</p>
+</body>
+</html>
