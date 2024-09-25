@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
+    <h1>Venha trabalhar conosco</h1>
     <form action="cadastro.php">
-        <h1>Venha trabalhar conosco</h1>
         <fieldset>
-            <legend>Dados Pessoais</legend>
+            <h3>Dados pessoais</h3>
             <p>
                 <label for="inome">Nome</label>
                 <input type="text" name="nome" id="inome" required>
@@ -26,10 +27,17 @@
                 <label for="itel">Telefone</label>
                 <input type="tel" name="tel" id="itel" required pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxx-xxxx">
             </p>
+            <p>
+                <label for="iano">Em que ano você naseu?</label>
+                <input type="number" name="ano" id="iano" min="1940" max="2024" oninput="calcIdade()">
+            </p>
+            <p>
+                <label for="iidade">Sua idade aproximadamente é:</label>
+                <output id="iidade">0</output>
+            </p>
         </fieldset>
         <fieldset>
-            <legend>Dados Familiares (Apenas menores de idade)</legend>
-            <p>
+            <h3>Setor de estágio</h3>
                 <label for="nomefam">Nome do responsável</label>
                 <input type="text" name="nomeres" id="nomefam" required>
             </p>
@@ -50,22 +58,43 @@
             </p>
         </fieldset>
         <fieldset>
-            <legend>Nível de ensino</legend>
+            <h3>NIvel de ensino</h3>
             <input type="radio" name="ensino" id="fundamental"><label for="fundamental">Fundamental</label><br>
             <input type="radio" name="ensino" id="medio"><label for="medio">Médio</label><br>
             <input type="radio" name="ensino" id="completo"><label for="completo">Completo</label>
         </fieldset>
         <fieldset>
-            <legend>Como nos conheceu?</legend>
+            <h3>Aonde nos conheceu</h3>
             <input type="checkbox" name="recomendação" id="reco"><label for="reco">Recomendação</label><br>
             <input type="checkbox" name="linkedin" id="link"><label for="link">LinkedIn</label><br>
             <input type="checkbox" name="canal" id="yt"><label for="yt">Canal no Youtube</label><br>
             <input type="checkbox" name="outro" id="ioutro"><label for="ioutro">Outro</label>
         </fieldset>
+        <fieldset>
+            <h3>Area de trabalho</h3>
+            <select name="prof" id="iprof">
+                <option value=""> Selecione
+                    <optgroup label="Front-end">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="js">Javascript</option>
+                        <option value="php">PHP</option>
+                    </optgroup>
+                    <optgroup label="Back-end">
+                        <option value="Msq">MySQL</option>
+                        <option value="java">Java</option>
+                        <option value="pyt">Python</option>
+                        <option value="c#">C#</option>
+                    </optgroup>
+            </select> <br> <br>
+            <h3>Deixe sua mensagem</h3>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="deixe sua crítica aqui!"></textarea>
+        </fieldset>
         <p>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar" class="button">
+            <input type="reset" value="Limpar" class="button">
         </p>
     </form>
+    <script src="form.js"></script>
 </body>
 </html>
