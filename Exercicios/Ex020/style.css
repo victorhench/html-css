@@ -1,0 +1,13 @@
+div{
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: lightblue;
+}
+
+div:hover{
+    background-color: aliceblue;
+    font-weight: bold;
+}
