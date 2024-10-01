@@ -29,3 +29,16 @@ input, textarea, select{
     height: 37;
     width: 87px;
 }
+
+@media screen and (orientation: portrait){
+    form{
+        width: 350px;
+    }
+    textarea{
+        width: 200px;
+        height: 100px;
+    }
+    h1{
+        font-size: 1.7em;
+    }
+}
