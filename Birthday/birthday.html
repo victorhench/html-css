@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente Surpresa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .intro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ff6f61;
+            color: white;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cards-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            width: 200px;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            padding: 20px;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            color: #ff6f61;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .card p {
+            font-size: 1rem;
+            text-align: center;
+            opacity: 0;
+            display: none;
+            margin-top: 10px;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="intro">
+        <h1>Fernanda Magalhães</h1>
+        <div class="cards-container">
+            <div class="card" onclick="revealMessage(this, 'Seu sorriso é a poesia mais bela que meus olhos já viram.')">
+                <h2>Eu</h2>
+                <p></p>
+            </div>
+            <div class="card" onclick="revealMessage(this, 'Eu não preciso te olhar pra te ter em meu mundo...')">
+                <h2>Te</h2>
+                <p></p>
+            </div>
+            <div class="card" onclick="revealMessage(this, 'Eu vou subir as nuvens pra desenhar o teu sorriso...')">
+                <h2>Amo</h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function revealMessage(card, messageText) {
+            let title = card.querySelector("h2");
+            let message = card.querySelector("p");
+
+            if (!message.innerText.trim()) { // Se a mensagem ainda não foi definida
+                message.innerText = messageText; // Define a mensagem fixa
+            }
+
+            title.style.display = "none"; // Some com o título
+            message.style.display = "block"; // Exibe a mensagem
+            message.style.opacity = "1"; // Garante que fique visível
+        }
+    </script>
+
+</body>
+</html>
